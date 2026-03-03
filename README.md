@@ -1,4 +1,4 @@
-# ⚖️ ELIS — Engenharia Legal Inteligente de Sentenças
+# ⚖️ ELIS — Engenharia Legal e Inteligente de Sentenças
 
 ## 📋 Descrição
 
