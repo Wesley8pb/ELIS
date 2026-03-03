@@ -93,14 +93,16 @@ Faça a engenharia de contexto do processo [REFERÊNCIA AOS ARQUIVOS]
 
 ### 3. Seguir o Fluxo
 
-O agente executará automaticamente as etapas, consultando você em cada transição.
+O agente executará as etapas conforme o cronograma do projeto, consultando você em cada transição.
 
-**Fluxo Condicional - Etapa 1.5:**
-Se o processo for uma **Representação em Propaganda Eleitoral (Classe RP)** com **pedido liminar**, o agente executará automaticamente a **Etapa 1.5 - Tutela de Urgência** após a Etapa 1, utilizando a skill especializada de propaganda eleitoral.
+**Etapa 1.5 - Tutela de Urgência (Fluxo Independente):**
+Esta etapa pode ser acionada **a qualquer momento**, independentemente do fluxo principal. Se o processo for uma **Representação (Classe RP)** com **pedido liminar**, o agente informará que você pode acionar a análise liminar imediatamente.
 
-Após a Etapa 1.5, você poderá escolher:
+**Comandos:** `"Execute a tutela de urgência"` ou `"Analise o pedido liminar"`.
+
+Após a conclusão da Etapa 1.5, você poderá escolher:
 - Prosseguir para **Etapa 2** (Deliberação) - análise completa do mérito
-- Ir direto para **Etapa 3** (Arquitetura) - se a liminar já resolveu a questão principal
+- Ir direto para **Etapa 3** (Arquitetura) - se a liminar já resolveu a questão principal ou se deseja pular a análise detalhada de mérito da Etapa 2.
 
 **Na Etapa 4**, o agente solicitará:
 - Jurisprudência que deseja citar
