@@ -65,6 +65,7 @@ Se for a primeira vez que você usa o ELIS neste ambiente, o assistente irá **a
 Coloque na pasta raiz do projeto:
 - Arquivo do processo completo (`.md`, `.docx`, `.txt` ou `.pdf`)
 - Arquivos de audiência (resumo/transcrição; `.md`, `.txt`, `.docx` ou `.pdf`)
+- Outros arquivos que achar necessários (exemplo: jurisprudências, trechos de artigos ou doutrina e etc)
 
 ---
 
