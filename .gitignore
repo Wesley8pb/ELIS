@@ -1,0 +1,98 @@
+# =============================================================
+# .gitignore — Sistema de Engenharia de Contexto para Sentenças
+# =============================================================
+# Gerado em: 2026-03-03
+# Objetivo: Proteger dados processuais sensíveis, obras com
+#           direitos autorais e configurações locais de IDE.
+#
+# ESTRATÉGIA: As pastas ficam visíveis no GitHub (mantidas via
+# .gitkeep), mas o conteúdo interno é protegido.
+# =============================================================
+
+
+# -------------------------------------------------------------
+# 1. PROCESSOS CONCLUÍDOS — conteúdo protegido
+#    Dados judiciais reais: autos, transcrições, sentenças.
+#    A pasta aparece no GitHub, o conteúdo fica local.
+# -------------------------------------------------------------
+PROCESSOS\ CONCLUIDOS/*
+!PROCESSOS\ CONCLUIDOS/.gitkeep
+
+
+# -------------------------------------------------------------
+# 2. MODELOS E DOUTRINA — conteúdo protegido
+#    Obras doutrinárias com direitos autorais e docs de cartório.
+#    A pasta aparece no GitHub, o conteúdo fica local.
+# -------------------------------------------------------------
+Modelos_e_Doutrina/*
+!Modelos_e_Doutrina/.gitkeep
+
+
+# -------------------------------------------------------------
+# 3. CONTEXTO — conteúdo protegido
+#    Workspace do processo ativo com dados processuais.
+#    A pasta aparece no GitHub, o conteúdo fica local.
+# -------------------------------------------------------------
+CONTEXTO/*
+!CONTEXTO/.gitkeep
+
+
+# -------------------------------------------------------------
+# 4. CHANGELOG — histórico local protegido
+#    O CHANGELOG.md fica apenas na máquina local de cada usuário.
+#    Quem clonar recebe o CHANGELOG.template.md zerado.
+# -------------------------------------------------------------
+Documentations/CHANGELOG.md
+
+
+# -------------------------------------------------------------
+# 5. CONFIGURAÇÕES LOCAIS DE IDE / FERRAMENTAS AI
+#    Arquivos específicos da máquina — não compartilhar.
+# -------------------------------------------------------------
+.claude/
+.gemini/
+.cursor/
+.vscode/
+*.local.json
+
+
+# -------------------------------------------------------------
+# 6. ARQUIVOS DE PROCESSO BRUTOS (por extensão)
+#    Proteção extra contra upload acidental de peças processuais
+#    em qualquer subpasta do repositório.
+# -------------------------------------------------------------
+*.docx
+*.doc
+*.pdf
+
+
+# -------------------------------------------------------------
+# 7. SISTEMA OPERACIONAL — WINDOWS
+#    Arquivos gerados automaticamente pelo Windows Explorer.
+# -------------------------------------------------------------
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+
+# -------------------------------------------------------------
+# 8. PYTHON — CACHE E AMBIENTES VIRTUAIS
+#    Gerados ao executar os scripts de conversão.
+# -------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+
+
+# -------------------------------------------------------------
+# 9. ARQUIVOS TEMPORÁRIOS E DE LOG
+# -------------------------------------------------------------
+*.tmp
+*.log
+*.bak
+*.swp
+*~
