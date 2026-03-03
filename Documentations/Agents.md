@@ -173,7 +173,6 @@ ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 8. **Incluir aviso de IA generativa** ao final de cada etapa.
 9. **Limpar raiz e CONTEXTO/** apos finalizar e mover para PROCESSOS CONCLUIDOS/.
 10. **Responder sempre em português** claro e objetivo.
-11. **Código limpo e comentado** — comece simples, elimine duplicações.
 
 ---
 
