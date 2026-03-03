@@ -19,7 +19,7 @@ Transformar documentos processuais em análises estruturadas que apoiam a tomada
 ```
 📦 ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── 📄 README.md                            # Este arquivo
-├── 📄 CLAUDE.md                            # Gerenciador de contexto para Claude/Claude Code
+├── 📄 CLAUDE.md                            # Symlink → Documentations/Agents.md (auto-carregado pelo Claude Code)
 ├── 📄 .gitignore                           # Proteção de dados processuais e locais
 ├── 📂 .agents/skills/                      # Skills disponíveis
 │   ├── INSTRUCOES-SKILLS.md             # Guia de criação e padronização de skills
@@ -33,15 +33,16 @@ Transformar documentos processuais em análises estruturadas que apoiam a tomada
 ├── 📂 CONTEXTO/                            # Resultados temporários (limpa após finalização)
 ├── 📂 PROCESSOS CONCLUIDOS/               # Processos finalizados ⚠️ LEITURA RESTRITA
 │   └── 📂 [NÚMERO DO PROCESSO]/            # Ex: 0600443-62.2024.6.15.0056
-├── 📂 TEMPLATES/                           # Sistema de Templates
-│   ├── INSTRUCOES-TEMPLATES.md          # Instruções de geração e uso
-│   └── INDICE-TEMPLATES.md              # Índice de templates disponíveis
+├── 📂 TEMPLATES/                           # Modelos reutilizáveis de sentença
 ├── 📂 Modelos_e_Doutrina/                  # Modelos e doutrina jurídica ⚠️ LEITURA SOB DEMANDA
 ├── 📂 scripts/                             # Scripts de preparação e conversão
 │   ├── prepare-input.ps1                # Script principal de conversão (PowerShell)
-│   └── extract_docx_to_md.py            # Extrator de DOCX para Markdown (Python)
+│   ├── extract_docx_to_md.py            # Extrator de DOCX para Markdown (Python)
+│   └── extract_pdf_to_md.py             # Extrator de PDF para Markdown (Python)
 └── 📂 Documentations/                      # Documentação do projeto
     ├── Agents.md                        # Referência completa (fluxo de trabalho)
+    ├── INSTRUCOES-TEMPLATES.md          # Instruções de geração e uso de templates
+    ├── INDICE-TEMPLATES.md              # Índice de templates disponíveis
     ├── CONVERSAO-ARQUIVOS.md            # Guia técnico de conversão de arquivos
     ├── CHANGELOG.template.md            # Template zerado do changelog (rastreado pelo Git)
     └── CHANGELOG.md                     # Histórico local de alterações (gerado no 1° uso)
@@ -126,7 +127,7 @@ O projeto inclui um **Sistema de Templates** para reutilização de modelos de s
 - **Salvar templates**: Após gerar sentença, salve como template para uso futuro
 - **Gerar templates**: Crie templates a partir de sentenças modelo fornecidas
 
-Consulte `TEMPLATES/INSTRUCOES-TEMPLATES.md` para instruções completas.
+Consulte `Documentations/INSTRUCOES-TEMPLATES.md` para instruções completas.
 
 ## 📜 Instruções Completas
 
@@ -140,21 +141,6 @@ Consulte o arquivo `Documentations/Agents.md` para instruções detalhadas do pr
 
 Uso interno para apoio à atividade jurisdicional.
 
-## 🧹 Limpeza de Pastas Legadas
-
-No fluxo atual, as pastas abaixo nao sao necessarias:
-- `.agent/`
-- `.venv/`
-- `.tmp/` (cache temporario)
-
-Comando de limpeza:
-
-```powershell
-Remove-Item -LiteralPath ".agent",".venv",".tmp" -Recurse -Force
-```
-
-Se a pasta `.tmp` estiver bloqueada por permissao, ela pode ser removida depois manualmente.
-
 ---
 
 ### Novidades da Versão 6.9 (atual)
@@ -162,5 +148,8 @@ Se a pasta `.tmp` estiver bloqueada por permissao, ela pode ser removida depois 
 - **Preparação para GitHub**: `.gitignore` com proteção de dados processuais e doutrinárias
 - **Fluxo de primeiro uso**: detecção automática de ambiente recém-clonado e configuração guiada
 - **CHANGELOG protegido**: cada usuário tem seu próprio histórico local a partir do `CHANGELOG.template.md`
+- **Arquitetura de sync**: `CLAUDE.md` é um symlink para `Documentations/Agents.md` — fonte única de referência para todas as ferramentas de IA
 
-*Versão 6.9 - Março/2026*
+> **Nota técnica (Windows)**: Em clones no Windows com `core.symlinks = false` (padrão), `CLAUDE.md` aparece como arquivo de texto com o caminho do alvo. Para resolver: `git config core.symlinks true` (requer modo de desenvolvedor ou permissão de administrador) e depois `git checkout -- CLAUDE.md`. Alternativamente, copie manualmente: `Copy-Item "Documentations\Agents.md" "CLAUDE.md"`.
+
+*ELIS v6.9.0 - Março/2026*
