@@ -9,12 +9,30 @@
 
 Este é o **documento universal do projeto** — funciona como contexto de sistema para qualquer LLM (Gemini, GPT, Claude, etc.).
 
-Para uso com **Claude Code**, o arquivo `CLAUDE.md` na raiz é carregado automaticamente e aponta para este documento para referência completa.
+Para uso com **Claude Code**, o arquivo `CLAUDE.md` na raiz é um **symlink** que aponta diretamente para este arquivo (`Documentations/Agents.md`). Isso significa que este documento é carregado automaticamente pelo Claude Code em cada sessão — qualquer atualização em `Agents.md` é refletida imediatamente em `CLAUDE.md`.
 
 | Arquivo | Ferramenta | Conteúdo |
 |---------|------------|----------|
-| **`CLAUDE.md`** | Claude Code (auto-carregado) | Regras, fluxo resumido, comportamento esperado |
-| **Agents.md** (este) | Qualquer LLM | Documento completo: checklist, comandos, nomenclatura, fluxo detalhado |
+| **`CLAUDE.md`** (symlink → Agents.md) | Claude Code (auto-carregado) | Aponta para este arquivo — fonte única de referência |
+| **`Agents.md`** (este arquivo) | Qualquer LLM | Documento completo: glossário, fluxo, checklist, skills, templates |
+
+---
+
+## ECONOMIA DE TOKENS
+
+**NÃO carregar os seguintes arquivos até que sejam efetivamente necessários:**
+
+| Recurso | Quando carregar |
+|---------|----------------|
+| `propaganda-eleitoral/SKILL.md` + `reference.md` | Somente quando a Etapa 1.5 for acionada |
+| `Documentations/INSTRUCOES-TEMPLATES.md` | Somente quando o usuário pedir template |
+| `Documentations/INDICE-TEMPLATES.md` | Somente quando o usuário pedir template |
+| Arquivos de template individuais | Somente quando o usuário escolher um |
+| `Modelos_e_Doutrina/` (qualquer arquivo) | Somente quando o usuário referenciar explicitamente |
+| `PROCESSOS CONCLUIDOS/` (qualquer subpasta) | Somente quando o usuário solicitar diretamente |
+| `Documentations/CHANGELOG.md` | Somente para registrar uma nova alteração |
+
+Em todos os outros casos, ignorar completamente estes arquivos.
 
 ---
 
@@ -112,7 +130,7 @@ Após executar os dois passos, informar ao usuário:
 ```
 ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── README.md                          # Apresentação do projeto (raiz — visível no GitHub)
-├── CLAUDE.md                          # Gerenciador de contexto para modelos Claude e Claude Code
+├── CLAUDE.md                          # Symlink → Documentations/Agents.md (auto-carregado pelo Claude Code)
 ├── .gitignore                         # Proteção de dados processuais e configurações locais
 ├── .agents/skills/                    # Skills do Antigravity
 │   ├── INSTRUCOES-SKILLS.md           # Guia de criacao de skills
@@ -129,12 +147,12 @@ ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── TEMPLATES/                         # Modelos reutilizaveis de sentenca (apenas templates)
 ├── scripts/                           # Scripts de conversao (PS1, Python)
 └── Documentations/                    # Documentacao do projeto
-    ├── Agents.md                      # VOCÊ ESTÁ AQUI - Referencia completa do projeto
-    ├── CONVERSAO-ARQUIVOS.md
-    ├── CHANGELOG.template.md          # Template zerado (rastreado pelo Git)
-    ├── CHANGELOG.md                   # Histórico local — NÃO rastreado pelo Git (gerado no 1° uso)
+    ├── Agents.md                      # VOCÊ ESTÁ AQUI — Referência completa do projeto
     ├── INSTRUCOES-TEMPLATES.md        # Instrucoes para geracao e uso de templates
-    └── INDICE-TEMPLATES.md            # Indice de templates disponiveis
+    ├── INDICE-TEMPLATES.md            # Indice de templates disponiveis
+    ├── CONVERSAO-ARQUIVOS.md          # Guia tecnico de conversao de arquivos
+    ├── CHANGELOG.template.md          # Template zerado (rastreado pelo Git)
+    └── CHANGELOG.md                   # Histórico local — NÃO rastreado pelo Git (gerado no 1° uso)
 ```
 
 **Formato do número do processo**: `NNNNNNN-DD.AAAA.J.TT.OOOO`
@@ -154,6 +172,8 @@ ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 7. **Texto corrido na fundamentacao**, sem subdivisoes visiveis, sem bullet points.
 8. **Incluir aviso de IA generativa** ao final de cada etapa.
 9. **Limpar raiz e CONTEXTO/** apos finalizar e mover para PROCESSOS CONCLUIDOS/.
+10. **Responder sempre em português** claro e objetivo.
+11. **Código limpo e comentado** — comece simples, elimine duplicações.
 
 ---
 
@@ -375,9 +395,8 @@ adaptada por profissional do Direito antes de sua utilizacao.
 ## REFERENCIAS
 
 - Documentação de apresentação: `README.md` (raiz)
-- Documentação detalhada: `Documentations/README.md`
-- Conversao de arquivos: `Documentations/CONVERSAO-ARQUIVOS.md`
-- Historico de alteracoes: `Documentations/CHANGELOG.md` (local) | `Documentations/CHANGELOG.template.md` (modelo zerado)
+- Conversão de arquivos: `Documentations/CONVERSAO-ARQUIVOS.md`
+- Histórico de alterações: `Documentations/CHANGELOG.md` (local) | `Documentations/CHANGELOG.template.md` (modelo zerado)
 - Templates: `Documentations/INSTRUCOES-TEMPLATES.md`
 - Skills: `.agents/skills/INSTRUCOES-SKILLS.md`
 
