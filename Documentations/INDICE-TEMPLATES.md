@@ -3,10 +3,10 @@
 # ÍNDICE DE TEMPLATES
 
 ## Estatísticas
-- **Total de templates**: 14
-- **Sentenças**: 5
+- **Total de templates**: 15
+- **Sentenças**: 6
 - **Decisões interlocutórias (liminar)**: 9
-- **Última atualização**: 02/03/2026
+- **Última atualização**: 03/03/2026
 
 ---
 
@@ -18,7 +18,8 @@
 |---|--------------|------------|----------------|---------|
 | 1 | Ação Penal Eleitoral | Improcedência/Absolvição | Corrupção Eleitoral | [ACAO-PENAL_IMPROCEDENCIA_CORRUPCAO-ELEITORAL.md](../TEMPLATES/ACAO-PENAL_IMPROCEDENCIA_CORRUPCAO-ELEITORAL.md) |
 | 2 | AIJE | Improcedência | Abuso de Poder Político/Econômico | [AIJE_IMPROCEDENCIA_ABUSO-PODER.md](../TEMPLATES/AIJE_IMPROCEDENCIA_ABUSO-PODER.md) |
-| 3 | AIJE | Improcedência | Múltiplas Condutas: Bem Móvel Públ. + Terceirização + Maquinário + Gastos Sociais + 13º Salário | [AIJE_IMPROCEDENCIA_MULTIPLAS-CONDUTAS.md](../TEMPLATES/AIJE_IMPROCEDENCIA_MULTIPLAS-CONDUTAS.md) 🆕 |
+| 3 | AIJE | Improcedência | Múltiplas Condutas: Bem Móvel Públ. + Terceirização + Maquinário + Gastos Sociais + 13º Salário | [AIJE_IMPROCEDENCIA_MULTIPLAS-CONDUTAS.md](../TEMPLATES/AIJE_IMPROCEDENCIA_MULTIPLAS-CONDUTAS.md) |
+| 4* | AIJE | Improcedência | Distribuição de Bens/Bebidas em Evento de Campanha + Captação Ilícita de Sufrágio | [AIJE_IMPROCEDENCIA_DISTRIBUICAO-BENS-EVENTO.md](../TEMPLATES/AIJE_IMPROCEDENCIA_DISTRIBUICAO-BENS-EVENTO.md) 🆕 |
 | 4 | AIME | Improcedência | Abuso de Poder Político/Econômico + Conduta Vedada + Captação Ilícita | [AIME_IMPROCEDENCIA_ABUSO-PODER.md](../TEMPLATES/AIME_IMPROCEDENCIA_ABUSO-PODER.md) ⬆️ *atualizado 02/03/2026* |
 | 5 | AIME | Improcedência | Fraude à Cota de Gênero (candidaturas fictícias) | [AIME_IMPROCEDENCIA_FRAUDE-COTA-GENERO.md](../TEMPLATES/AIME_IMPROCEDENCIA_FRAUDE-COTA-GENERO.md) 🆕 |
 
@@ -73,6 +74,7 @@
 - **AIJE**:
   - [Improcedência - Abuso de Poder Político/Econômico](../TEMPLATES/AIJE_IMPROCEDENCIA_ABUSO-PODER.md)
   - [Improcedência - Múltiplas Condutas (Bem Móvel, Terceirização, Maquinário, Gastos Sociais, 13º Salário)](../TEMPLATES/AIJE_IMPROCEDENCIA_MULTIPLAS-CONDUTAS.md)
+  - [Improcedência - Distribuição de Bens/Bebidas em Evento de Campanha + Captação Ilícita de Sufrágio](../TEMPLATES/AIJE_IMPROCEDENCIA_DISTRIBUICAO-BENS-EVENTO.md)
 - **AIME**:
   - [Improcedência - Abuso de Poder Político/Econômico + Conduta Vedada + Captação Ilícita](../TEMPLATES/AIME_IMPROCEDENCIA_ABUSO-PODER.md)
   - [Improcedência - Fraude à Cota de Gênero](../TEMPLATES/AIME_IMPROCEDENCIA_FRAUDE-COTA-GENERO.md)
@@ -94,10 +96,11 @@
   - [Fake News Múltiplas](../TEMPLATES/RP-LIMINAR_PARCIAL_FAKE-NEWS-MULTIPLAS.md) — R$ 20k/dia por publicação
 - **Simples Citação** (1 template):
   - [Propaganda Negativa WhatsApp](../TEMPLATES/RP_CITACAO_PROPAGANDA-NEGATIVA-WHATSAPP.md)
-- **Improcedência** (5 templates):
+- **Improcedência** (6 templates):
   - [Ação Penal - Corrupção Eleitoral](../TEMPLATES/ACAO-PENAL_IMPROCEDENCIA_CORRUPCAO-ELEITORAL.md)
   - [AIJE - Abuso de Poder Político/Econômico](../TEMPLATES/AIJE_IMPROCEDENCIA_ABUSO-PODER.md)
   - [AIJE - Múltiplas Condutas](../TEMPLATES/AIJE_IMPROCEDENCIA_MULTIPLAS-CONDUTAS.md)
+  - [AIJE - Distribuição de Bens em Evento de Campanha](../TEMPLATES/AIJE_IMPROCEDENCIA_DISTRIBUICAO-BENS-EVENTO.md)
   - [AIME - Abuso de Poder Político/Econômico + Conduta Vedada + Captação Ilícita](../TEMPLATES/AIME_IMPROCEDENCIA_ABUSO-PODER.md)
   - [AIME - Fraude à Cota de Gênero](../TEMPLATES/AIME_IMPROCEDENCIA_FRAUDE-COTA-GENERO.md)
 
