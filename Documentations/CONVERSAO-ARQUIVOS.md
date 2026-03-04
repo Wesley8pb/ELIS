@@ -91,7 +91,7 @@ py -m pip install pdfplumber reportlab
 Execute um teste rápido:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "arquivo_teste.pdf"
+powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "arquivo_teste.pdf"
 ```
 
 Se houver erro sobre `pypdf não encontrado`, repita o passo 2.  
@@ -114,7 +114,7 @@ O projeto possui uma **skill de PDF** instalada via Antigravity que expande sign
 | `SKILL.md` | Guia principal com operações essenciais |
 | `reference.md` | Referência completa com exemplos avançados |
 | `forms.md` | Instruções para preenchimento de formulários PDF |
-| `scripts/` | Scripts auxiliares prontos para uso |
+| `.agents/scripts/` | Scripts auxiliares prontos para uso |
 
 ### **🎯 Capacidades da Skill**
 
@@ -164,10 +164,10 @@ A skill está integrada ao fluxo de preparação de arquivos através do script 
 
 ---
 
-## 📂 **ESTRUTURA DA PASTA `scripts/`**
+## 📂 **ESTRUTURA DA PASTA `.agents/scripts/`**
 
 ```
-scripts/
+.agents/scripts/
 ├── prepare-input.ps1         # Script principal de conversão (PowerShell)
 ├── extract_docx_to_md.py     # Extrator de DOCX para Markdown (Python stdlib)
 └── extract_pdf_to_md.py      # Extrator de PDF para Markdown (Python + pypdf)
@@ -177,14 +177,14 @@ scripts/
 
 ## 🔧 **SCRIPT PRINCIPAL: `prepare-input.ps1`**
 
-**Localização:** `scripts/prepare-input.ps1`
+**Localização:** `.agents/scripts/prepare-input.ps1`
 
 **Função:** Converte arquivos `.pdf`, `.docx`, `.txt` ou `.md` para um formato Markdown padronizado.
 
 ### **Sintaxe**
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "<arquivo>"
+powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "<arquivo>"
 ```
 
 ### **Parâmetros**
@@ -198,15 +198,15 @@ powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "<
 
 ```powershell
 # Converter PDF para Markdown
-powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "0600443-62.2024.6.15.0056.pdf"
+powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "0600443-62.2024.6.15.0056.pdf"
 # Saída: 0600443-62.2024.6.15.0056 - PROCESSADO.md
 
 # Converter DOCX para Markdown
-powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "Resumo_Audiencia.docx"
+powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "Resumo_Audiencia.docx"
 # Saída: Resumo_Audiencia - PROCESSADO.md
 
 # Especificar arquivo de saída personalizado
-powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "documento.pdf" -OutputFile "saida_customizada.md"
+powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "documento.pdf" -OutputFile "saida_customizada.md"
 ```
 
 ### **Formatos Suportados**
@@ -222,7 +222,7 @@ powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "d
 
 ---
 
-## 📄 **EXTRATORES PYTHON (`scripts/*.py`)**
+## 📄 **EXTRATORES PYTHON (`.agents/scripts/*.py`)**
 
 ### **1. `extract_docx_to_md.py`**
 - Extrai texto, tabelas e notas de arquivos `.docx`
@@ -287,7 +287,7 @@ Quando o agente encontrar arquivos `.docx` ou `.pdf` na raiz do projeto:
     → Com caminho completo: & "C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe" -m pip install pypdf
 □ (Opcional) Instalar pdfplumber, pdf2image, reportlab
 □ Colocar arquivos na raiz do projeto
-□ Executar: powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "arquivo.ext"
+□ Executar: powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "arquivo.ext"
 □ Se o script falhar com 'py not recognized', o script auto-detecta o Python via caminho absoluto
 □ Verificar arquivo [NOME - PROCESSADO].md gerado
 □ Proceder com a engenharia de contexto

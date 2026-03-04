@@ -1,7 +1,7 @@
 # ELIS — Engenharia Legal e Inteligente de Sentenças
 
 > **Projeto**: ELIS — Engenharia Legal e Inteligente de Sentenças
-> **Versão**: 6.9.0 | **Data**: 2026-03-03
+> **Versão**: 6.16.0 | **Data**: 2026-03-04
 
 ---
 
@@ -145,7 +145,7 @@ ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── PROCESSOS CONCLUIDOS/              # Arquivo de processos finalizados ⚠️ LEITURA RESTRITA
 ├── Modelos_e_Doutrina/                # Modelos e doutrina juridica ⚠️ LEITURA SOB DEMANDA
 ├── TEMPLATES/                         # Modelos reutilizaveis de sentenca (apenas templates)
-├── scripts/                           # Scripts de conversao (PS1, Python)
+├── .agents/scripts/                   # Scripts de conversao (PS1, Python)
 └── Documentations/                    # Documentacao do projeto
     ├── Agents.md                      # VOCÊ ESTÁ AQUI — Referência completa do projeto
     ├── INSTRUCOES-TEMPLATES.md        # Instrucoes para geracao e uso de templates
@@ -181,10 +181,10 @@ ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 | Formato | Tratamento |
 |---------|------------|
 | `.md` / `.txt` | Processamento direto |
-| `.docx` | Conversao via `scripts/prepare-input.ps1` -> `[NOME - PROCESSADO].md` |
+| `.docx` | Conversao via `.agents/scripts/prepare-input.ps1` -> `[NOME - PROCESSADO].md` |
 | `.pdf` | Extracao via `pypdf` + conversao -> `[NOME - PROCESSADO].md` |
 
-**Comando**: `powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "<arquivo>"`
+**Comando**: `powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "<arquivo>"`
 
 **Pre-requisitos**: PowerShell disponível + `pip install pypdf` (apenas para PDFs)
 
@@ -401,4 +401,4 @@ adaptada por profissional do Direito antes de sua utilizacao.
 
 ---
 
-*ELIS v6.9.0 - Março/2026*
+*ELIS v6.16.0 - Março/2026*

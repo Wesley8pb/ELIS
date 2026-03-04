@@ -35,7 +35,7 @@ Transformar documentos processuais em análises estruturadas que apoiam a tomada
 │   └── 📂 [NÚMERO DO PROCESSO]/            # Ex: 0600443-62.2024.6.15.0056
 ├── 📂 TEMPLATES/                           # Modelos reutilizáveis de sentença
 ├── 📂 Modelos_e_Doutrina/                  # Modelos e doutrina jurídica ⚠️ LEITURA SOB DEMANDA
-├── 📂 scripts/                             # Scripts de preparação e conversão
+├── 📂 .agents/scripts/                       # Scripts de preparação e conversão
 │   ├── prepare-input.ps1                # Script principal de conversão (PowerShell)
 │   ├── extract_docx_to_md.py            # Extrator de DOCX para Markdown (Python)
 │   └── extract_pdf_to_md.py             # Extrator de PDF para Markdown (Python)
@@ -72,11 +72,11 @@ Coloque na pasta raiz do projeto:
 
 ## 🔧 Preparação de Arquivos PDF e DOCX
 
-O sistema converte automaticamente arquivos `.pdf` e `.docx` para Markdown usando o script `scripts/prepare-input.ps1`.
+O sistema converte automaticamente arquivos `.pdf` e `.docx` para Markdown usando o script `.agents/scripts/prepare-input.ps1`.
 
 **Comando básico:**
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "<arquivo>"
+powershell -ExecutionPolicy Bypass -File .agents/scripts/prepare-input.ps1 -InputFile "<arquivo>"
 ```
 
 > 📚 **Para instruções técnicas completas** sobre instalação de dependências, comandos detalhados, tratamento de erros e skill de PDF, consulte: **[CONVERSAO-ARQUIVOS.md](Documentations/CONVERSAO-ARQUIVOS.md)**
@@ -143,7 +143,8 @@ Uso interno para apoio à atividade jurisdicional.
 
 ---
 
-### Novidades da Versão 6.9 (atual)
+### Novidades da Versão 6.16 (atual)
+- **Reorganização estrutural**: pasta `scripts/` movida para dentro de `.agents/scripts/` para maior organização
 - **Nome oficial**: ELIS — Engenharia Legal Inteligente de Sentenças
 - **Preparação para GitHub**: `.gitignore` com proteção de dados processuais e doutrinárias
 - **Fluxo de primeiro uso**: detecção automática de ambiente recém-clonado e configuração guiada
