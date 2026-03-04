@@ -19,12 +19,23 @@ Transformar documentos processuais em análises estruturadas que apoiam a tomada
 ```
 📦 ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── 📄 README.md                            # Este arquivo
-├── 📄 CLAUDE.md                            # Symlink → Documentations/Agents.md (auto-carregado pelo Claude Code)
+├── 📄 CLAUDE.md                            # Cópia de Agents.md (auto-carregado pelo Claude Code)
 ├── 📄 .gitignore                           # Proteção de dados processuais e locais
-├── 📂 .agents/skills/                      # Skills disponíveis
-│   ├── INSTRUCOES-SKILLS.md             # Guia de criação e padronização de skills
-│   ├── 📂 pdf/                             # Skill de manipulação de PDF
-│   └── 📂 propaganda-eleitoral/            # Skill de tutela de urgência
+├── 📂 .agents/                             # Ferramentas e automações do projeto
+│   ├── 📂 scripts/                         # Scripts de preparação e conversão
+│   │   ├── prepare-input.ps1           # Script principal de conversão (PowerShell)
+│   │   ├── extract_docx_to_md.py       # Extrator de DOCX para Markdown (Python)
+│   │   └── extract_pdf_to_md.py        # Extrator de PDF para Markdown (Python)
+│   └── 📂 skills/                          # Skills disponíveis
+│       ├── INSTRUCOES-SKILLS.md        # Guia de criação e padronização de skills
+│       ├── 📂 pdf/                         # Skill de manipulação de PDF
+│       │   ├── SKILL.md
+│       │   ├── forms.md
+│       │   ├── reference.md
+│       │   └── 📂 scripts/                 # Scripts auxiliares da skill PDF
+│       └── 📂 propaganda-eleitoral/        # Skill de tutela de urgência
+│           ├── SKILL.md
+│           └── reference.md
 ├── 📂 PROMPTS/                             # Prompts das etapas
 │   ├── ETAPA 1- ANALISE FIRAC.md        # Análise FIRAC+
 │   ├── ETAPA 2 - DELIBERAÇÃO.md         # Conjunto probtório
@@ -35,10 +46,6 @@ Transformar documentos processuais em análises estruturadas que apoiam a tomada
 │   └── 📂 [NÚMERO DO PROCESSO]/            # Ex: 0600443-62.2024.6.15.0056
 ├── 📂 TEMPLATES/                           # Modelos reutilizáveis de sentença
 ├── 📂 Modelos_e_Doutrina/                  # Modelos e doutrina jurídica ⚠️ LEITURA SOB DEMANDA
-├── 📂 .agents/scripts/                       # Scripts de preparação e conversão
-│   ├── prepare-input.ps1                # Script principal de conversão (PowerShell)
-│   ├── extract_docx_to_md.py            # Extrator de DOCX para Markdown (Python)
-│   └── extract_pdf_to_md.py             # Extrator de PDF para Markdown (Python)
 └── 📂 Documentations/                      # Documentação do projeto
     ├── Agents.md                        # Referência completa (fluxo de trabalho)
     ├── INSTRUCOES-TEMPLATES.md          # Instruções de geração e uso de templates

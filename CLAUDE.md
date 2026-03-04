@@ -130,12 +130,23 @@ Após executar os dois passos, informar ao usuário:
 ```
 ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── README.md                          # Apresentação do projeto (raiz — visível no GitHub)
-├── CLAUDE.md                          # Symlink → Documentations/Agents.md (auto-carregado pelo Claude Code)
+├── CLAUDE.md                          # Cópia de Agents.md (auto-carregado pelo Claude Code)
 ├── .gitignore                         # Proteção de dados processuais e configurações locais
-├── .agents/skills/                    # Skills do Antigravity
-│   ├── INSTRUCOES-SKILLS.md           # Guia de criacao de skills
-│   ├── pdf/                           # Skill de manipulacao de PDF
-│   └── propaganda-eleitoral/          # Skill de tutela de urgencia (RP)
+├── .agents/                           # Ferramentas e automações do projeto
+│   ├── scripts/                       # Scripts de conversao (PS1, Python)
+│   │   ├── prepare-input.ps1          # Script principal de conversao
+│   │   ├── extract_docx_to_md.py      # Extrator de DOCX para Markdown
+│   │   └── extract_pdf_to_md.py       # Extrator de PDF para Markdown
+│   └── skills/                        # Skills do Antigravity
+│       ├── INSTRUCOES-SKILLS.md       # Guia de criacao e padronizacao de skills
+│       ├── pdf/                       # Skill de manipulacao de PDF
+│       │   ├── SKILL.md               # Instrucoes da skill
+│       │   ├── forms.md               # Instrucoes para formularios PDF
+│       │   ├── reference.md           # Referencia completa com exemplos
+│       │   └── scripts/               # Scripts auxiliares da skill PDF
+│       └── propaganda-eleitoral/      # Skill de tutela de urgencia (RP)
+│           ├── SKILL.md               # Instrucoes da skill
+│           └── reference.md           # Referencia complementar
 ├── PROMPTS/                           # Prompts das 4 etapas
 │   ├── ETAPA 1- ANALISE FIRAC.md
 │   ├── ETAPA 2 - DELIBERACAO.md
@@ -145,7 +156,6 @@ ENGENHARIA DE CONTEXTO PARA SENTENCAS/
 ├── PROCESSOS CONCLUIDOS/              # Arquivo de processos finalizados ⚠️ LEITURA RESTRITA
 ├── Modelos_e_Doutrina/                # Modelos e doutrina juridica ⚠️ LEITURA SOB DEMANDA
 ├── TEMPLATES/                         # Modelos reutilizaveis de sentenca (apenas templates)
-├── .agents/scripts/                   # Scripts de conversao (PS1, Python)
 └── Documentations/                    # Documentacao do projeto
     ├── Agents.md                      # VOCÊ ESTÁ AQUI — Referência completa do projeto
     ├── INSTRUCOES-TEMPLATES.md        # Instrucoes para geracao e uso de templates
