@@ -1,7 +1,7 @@
 # ELIS — Engenharia Legal e Inteligente de Sentenças
 
-> **Projeto**: ELIS — Engenharia Legal e Inteligente de Sentenças
-> **Versão**: 6.16.0 | **Data**: 2026-03-04
+> **Projeto**: ELIS
+> **Versão**: 6.16 | **Data**: 2026-03-04
 
 ---
 
@@ -401,6 +401,12 @@ adaptada por profissional do Direito antes de sua utilizacao.
 
 ---
 
+## VERSIONAMENTO (GIT)
+
+O **ELIS** não realiza commits ou pushes de forma automática. Todas as operações de versionamento (`git add`, `git commit`, `git push`) devem ser executadas **manualmente pelo usuário** após a conclusão das tarefas, garantindo controle total sobre o histórico do repositório.
+
+---
+
 ## REFERENCIAS
 
 - Documentação de apresentação: `README.md` (raiz)
@@ -411,4 +417,4 @@ adaptada por profissional do Direito antes de sua utilizacao.
 
 ---
 
-*ELIS v6.16.0 - Março/2026*
+*ELIS v6.16.1 - Março/2026*
