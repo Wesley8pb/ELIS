@@ -42,16 +42,19 @@ py --version
 > ⚠️ **Atenção — Python pode não estar no PATH:** Em alguns casos, o Python está instalado mas o executável **não está visível** para o PowerShell (a opção "Add Python to PATH" não foi marcada durante a instalação). Nesse caso, o comando `py` e `python` retornam:
 > `"The term 'py' is not recognized as a name of a cmdlet..."`
 
-**Caminho real do Python instalado neste sistema:**
+**Caminho típico do Python instalado (substitua `<SEU_USUARIO>` e `Python3XX` pela sua versão):**
 ```
-C:\Users\034105571236\AppData\Local\Programs\Python\Python313\python.exe
+C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe
 ```
+
+> 💡 Para descobrir seu usuário, abra o PowerShell e execute: `$env:USERNAME`
+> Para descobrir a versão instalada, procure a pasta em `C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\`
 
 Para verificar se esse caminho existe e qual versão está instalada:
 
 ```powershell
-& "C:\Users\034105571236\AppData\Local\Programs\Python\Python313\python.exe" --version
-# Esperado: Python 3.13.x
+& "C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe" --version
+# Esperado: Python 3.x.x
 ```
 
 Se não estiver instalado, baixe em: [python.org](https://www.python.org/downloads/)  
@@ -68,7 +71,7 @@ py -m pip install pypdf
 
 **Se precisar usar o caminho completo:**
 ```powershell
-& "C:\Users\034105571236\AppData\Local\Programs\Python\Python313\python.exe" -m pip install pypdf
+& "C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe" -m pip install pypdf
 ```
 
 ### **3. (Opcional) Instalar Bibliotecas Avançadas**
@@ -80,7 +83,7 @@ Para funcionalidades avançadas da skill de PDF (extração de tabelas, OCR):
 py -m pip install pdfplumber reportlab
 
 # Se precisar do caminho completo
-& "C:\Users\034105571236\AppData\Local\Programs\Python\Python313\python.exe" -m pip install pdfplumber reportlab
+& "C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe" -m pip install pdfplumber reportlab
 ```
 
 ### **4. Verificar Instalação**
@@ -256,7 +259,7 @@ Todos os arquivos convertidos possuem um **cabeçalho de metadados** no início:
 | `Falha ao extrair PDF` | PDF corrompido ou protegido | Verificar integridade do PDF |
 | `Aviso: Nenhum texto foi extraído` | PDF escaneado (imagem) sem OCR | O PDF precisa ter texto selecionável (OCR) |
 | `Arquivo DOCX inválido` | DOCX corrompido ou inválido | Verificar integridade do arquivo |
-| `'py' is not recognized...` | Python não está no PATH do sistema | Usar o caminho completo: `C:\Users\034105571236\AppData\Local\Programs\Python\Python313\python.exe` — ou reinstalar o Python marcando "Add to PATH" |
+| `'py' is not recognized...` | Python não está no PATH do sistema | Usar o caminho completo: `C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe` — ou reinstalar o Python marcando "Add to PATH" |
 
 ---
 
@@ -275,12 +278,13 @@ Quando o agente encontrar arquivos `.docx` ou `.pdf` na raiz do projeto:
 
 ```
 □ Verificar se Python 3.x está instalado
-    → Caminho neste sistema: C:\Users\034105571236\AppData\Local\Programs\Python\Python313\python.exe
+    → Caminho típico: C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe
+    → Para descobrir seu usuário: execute $env:USERNAME no PowerShell
 □ Verificar se 'py' está disponível no PATH (opcional, mas facilita o uso):
     → Se não estiver, usar sempre o caminho completo acima
 □ Instalar pypdf:
     → Com py no PATH: py -m pip install pypdf
-    → Com caminho completo: & "C:\...\Python313\python.exe" -m pip install pypdf
+    → Com caminho completo: & "C:\Users\<SEU_USUARIO>\AppData\Local\Programs\Python\Python3XX\python.exe" -m pip install pypdf
 □ (Opcional) Instalar pdfplumber, pdf2image, reportlab
 □ Colocar arquivos na raiz do projeto
 □ Executar: powershell -ExecutionPolicy Bypass -File scripts/prepare-input.ps1 -InputFile "arquivo.ext"
@@ -302,4 +306,4 @@ Quando o agente encontrar arquivos `.docx` ou `.pdf` na raiz do projeto:
 *Documento criado em: 11/02/2026*  
 *Última atualização: 02/03/2026*  
 *Versão: 1.1*  
-*Extraído de: Agents.md v2.0 | Atualizado com diagnóstico de PATH do Python (Python 3.13 — AppData/Local/Programs/Python/Python313)*
+*Extraído de: Agents.md v2.0 | Atualizado com instruções genéricas de PATH do Python (AppData/Local/Programs/Python/Python3XX)*
