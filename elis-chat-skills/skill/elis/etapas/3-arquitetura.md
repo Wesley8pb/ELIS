@@ -1,8 +1,3 @@
----
-name: elis-etapa3-arquitetura
-description: Etapa 3 do fluxo ELIS — Arquitetura da Sentença (plano de decisão judicial). Organiza os elementos das etapas anteriores (FIRAC+ e Deliberação) em plano estruturado e completo da sentença - dados estruturais, roteiro do relatório, roteiro da fundamentação com argumentos hierarquizados, dispositivo planejado, blindagem recursal, trechos sugeridos e síntese executiva. Inclui as diretrizes de estilo de escrita do magistrado. Acionar quando o usuário pedir a arquitetura ou plano da sentença, prosseguir da Etapa 2 para a Etapa 3, ou usar prossiga para a Etapa 3.
----
-
 # ETAPA 3 — 🏗️ ARQUITETURA DA SENTENÇA (Plano de Decisão Judicial) — V3.0
 
 ## 🎯 OBJETIVO
@@ -527,7 +522,3 @@ Após salvar o plano, apresentá-lo ao usuário e incluir o aviso de IA generati
 2. Verificar os critérios para avançar (checklist acima).
 3. Sugerir explicitamente a próxima fase: **"O plano da sentença está pronto. Deseja prosseguir para a Etapa 4 (Sentença Final)? Use `prossiga para a Etapa 4` ou diga 'prossiga'."**
 4. Nunca encerrar a conversa sem oferecer a próxima etapa.
-
----
-
-> **Ambiente claude.ai:** os arquivos e scripts citados estão empacotados nesta skill; ao executar um script, rode-o a partir do diretório desta skill. Para converter PDF/DOCX, anexar o documento diretamente à conversa costuma bastar — o Claude lê esses formatos nativamente — sem precisar dos scripts.

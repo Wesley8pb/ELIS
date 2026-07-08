@@ -1,8 +1,3 @@
----
-name: elis-conversao-arquivos
-description: Fase 0 do fluxo ELIS — conversão de documentos processuais .pdf e .docx para Markdown antes das etapas de análise. Usa scripts Python embarcados (pypdf para PDF, stdlib para DOCX) ou o script PowerShell prepare-input.ps1 no Windows. Acionar sempre que houver arquivos .pdf ou .docx de processo a converter na pasta de trabalho, ou quando o usuário pedir para converter/extrair documentos do processo.
----
-
 # Conversão de Arquivos (Fase 0 do fluxo ELIS)
 
 Converte documentos processuais para Markdown, permitindo processamento eficiente pelas etapas do ELIS.
@@ -93,7 +88,3 @@ Quando encontrar arquivos `.docx` ou `.pdf` de processo na pasta de trabalho:
 | `Aviso: Nenhum texto foi extraído` | PDF escaneado (imagem) sem OCR | O PDF precisa ter texto selecionável (OCR) |
 | `Arquivo DOCX inválido` | DOCX corrompido | Verificar integridade do arquivo |
 | `'py' is not recognized...` | Python fora do PATH (Windows) | Usar o caminho absoluto do Python ou reinstalar marcando "Add to PATH" |
-
----
-
-> **Ambiente claude.ai:** os arquivos e scripts citados estão empacotados nesta skill; ao executar um script, rode-o a partir do diretório desta skill. Para converter PDF/DOCX, anexar o documento diretamente à conversa costuma bastar — o Claude lê esses formatos nativamente — sem precisar dos scripts.

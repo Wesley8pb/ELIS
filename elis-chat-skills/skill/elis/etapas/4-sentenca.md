@@ -1,8 +1,3 @@
----
-name: elis-etapa4-sentenca
-description: Etapa 4 do fluxo ELIS — Sentença Final. Gera a sentença judicial eleitoral completa e fundamentada (cabeçalho, relatório, fundamentação, dispositivo) com base nos artefatos das etapas anteriores, integrando jurisprudência e doutrina FORNECIDAS PELO USUÁRIO (nunca criadas) e, opcionalmente, templates do sistema. Inclui checklist de qualidade, blindagem recursal e opção de salvar como template. Acionar quando o usuário pedir a sentença final, a minuta da sentença, prosseguir da Etapa 3 para a Etapa 4, ou usar prossiga para a Etapa 4.
----
-
 # ETAPA 4 — ⚖️ SENTENÇA JUDICIAL (Documento Final) — V1.0
 
 ## 🎯 OBJETIVO
@@ -81,9 +76,9 @@ mantendo o estilo e formatação do template fornecido.
 
 ### 3.1 USO DE TEMPLATE DO SISTEMA
 
-Se o usuário escolher usar template do sistema, **invocar a skill `elis-templates-sentenca`** e seguir o Fluxo 3 (Uso de Template). Em resumo:
+Se o usuário escolher usar template do sistema, **consultar as instruções em `etapas/templates-sentenca.md`** e seguir o Fluxo 3 (Uso de Template). Em resumo:
 
-1. **VARRER** o índice embarcado da skill `elis-templates-sentenca` e a pasta `TEMPLATES/` local da área de trabalho (se existir)
+1. **VARRER** o índice embarcado das instruções em `etapas/templates-sentenca.md` e a pasta `TEMPLATES/` local da área de trabalho (se existir)
 2. **IDENTIFICAR** templates compatíveis com: tipo de ação, julgamento escolhido e tema principal
 3. **SUGERIR** os compatíveis, indicando o percentual de compatibilidade
 4. **CARREGAR** o template escolhido
@@ -229,7 +224,7 @@ Após o trânsito em julgado, [providências específicas: arquivamento, comunic
 Juiz(a) Eleitoral da [Zona] Zona Eleitoral
 ```
 
-> **Estilo de escrita:** aplicar as diretrizes da seção `ESTILO DE ESCRITA DO MAGISTRADO` definidas na Etapa 3 (skill `elis-etapa3-arquitetura`) — texto corrido, parágrafos médios (3–5 linhas), sem subdivisões visíveis na fundamentação, nunca criar jurisprudência ou doutrina.
+> **Estilo de escrita:** aplicar as diretrizes da seção `ESTILO DE ESCRITA DO MAGISTRADO` definidas na Etapa 3 (instruções em `etapas/3-arquitetura.md`) — texto corrido, parágrafos médios (3–5 linhas), sem subdivisões visíveis na fundamentação, nunca criar jurisprudência ou doutrina.
 
 ## ✅ CHECKLIST DE QUALIDADE DA SENTENÇA
 
@@ -306,7 +301,7 @@ Se SIM:
 - Será salvo em TEMPLATES/ (pasta de trabalho) com nomenclatura padrão
 ```
 
-Se SIM, **invocar a skill `elis-templates-sentenca`** e seguir o Fluxo 2 (Salvar Template após Etapa 4). Em resumo:
+Se SIM, **consultar as instruções em `etapas/templates-sentenca.md`** e seguir o Fluxo 2 (Salvar Template após Etapa 4). Em resumo:
 
 1. **GENERALIZAR** a sentença: substituir partes por `[NOME_AUTOR]`/`[NOME_REU]`, número por `[NUMERO_PROCESSO]`, datas por `[DATA_FATO]`/`[DATA_SENTENCA]`, IDs por `[ID_DOCUMENTO_X]`; manter estrutura, estilo e fundamentação
 2. **IDENTIFICAR** metadados: tipo de ação, julgamento, tema principal (do contexto da Etapa 1)
@@ -340,7 +335,3 @@ Os arquivos foram movidos para PROCESSOS CONCLUIDOS/[NÚMERO]/
 
 🎯 A sentença está pronta para revisão final e utilização.
 ```
-
----
-
-> **Ambiente claude.ai:** os arquivos e scripts citados estão empacotados nesta skill; ao executar um script, rode-o a partir do diretório desta skill. Para converter PDF/DOCX, anexar o documento diretamente à conversa costuma bastar — o Claude lê esses formatos nativamente — sem precisar dos scripts.

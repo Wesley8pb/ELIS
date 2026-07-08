@@ -1,8 +1,3 @@
----
-name: elis-etapa1-analise-firac
-description: Etapa 1 do fluxo ELIS — Análise FIRAC+ (Facts, Issue, Rule, Application, Conclusion + análise crítica) de processos judiciais eleitorais. Lê todos os documentos do processo e produz análise estruturada com dados do processo, contexto processual, fatos, mapa de provas, problema jurídico, direito aplicável, argumentos das partes e análise crítica da controvérsia. Acionar quando o usuário pedir análise FIRAC, análise do processo eleitoral, iniciar a engenharia de contexto, ou usar iniciar a Etapa 1.
----
-
 # ETAPA 1 — ANÁLISE FIRAC+ (V2.0)
 
 ## TAREFA PRINCIPAL
@@ -129,7 +124,3 @@ Após salvar a análise e apresentá-la ao usuário:
 2. **Se a classe processual for RP com pedido de tutela de urgência (liminar)**: informar que a Etapa 1.5 (Tutela de Urgência — `analise o pedido liminar`) pode ser acionada a qualquer momento, e sugerir executá-la agora.
 3. Sugerir explicitamente a próxima fase: **"Deseja prosseguir para a Etapa 2 (Deliberação)? Use `prossiga para a Etapa 2` ou diga 'prossiga'."**
 4. Nunca encerrar a conversa sem oferecer a próxima etapa.
-
----
-
-> **Ambiente claude.ai:** os arquivos e scripts citados estão empacotados nesta skill; ao executar um script, rode-o a partir do diretório desta skill. Para converter PDF/DOCX, anexar o documento diretamente à conversa costuma bastar — o Claude lê esses formatos nativamente — sem precisar dos scripts.

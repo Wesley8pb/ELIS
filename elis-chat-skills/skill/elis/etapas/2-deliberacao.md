@@ -1,8 +1,3 @@
----
-name: elis-etapa2-deliberacao
-description: Etapa 2 do fluxo ELIS — Deliberação. Análise técnico-jurídica do conjunto probatório de qualquer ação eleitoral (AIJE, AIME, Representações, Prestação de Contas), argumentada pela PROCEDÊNCIA ou IMPROCEDÊNCIA conforme posicionamento definido pelo magistrado. Produz pontos nevrálgicos, teses jurídicas, fragilidades da parte contrária e síntese conclusiva. Acionar quando o usuário pedir a deliberação, a análise do conjunto probatório, prosseguir da Etapa 1 para a Etapa 2, ou usar prossiga para a Etapa 2.
----
-
 # ETAPA 2 — ANÁLISE DE CONJUNTO PROBATÓRIO PARA AÇÕES ELEITORAIS (V2.0)
 
 ## 🎯 OBJETIVO
@@ -208,7 +203,3 @@ Após salvar a análise, apresentá-la ao usuário e incluir o aviso de IA gener
 2. Perguntar se deseja ajustes antes de prosseguir.
 3. Sugerir explicitamente a próxima fase: **"Com base nesta análise probatória, os elementos estão organizados para estruturar a linha argumentativa da sentença. Deseja prosseguir para a Etapa 3 (Arquitetura da Sentença)? Use `prossiga para a Etapa 3` ou diga 'prossiga'."**
 4. Nunca encerrar a conversa sem oferecer a próxima etapa.
-
----
-
-> **Ambiente claude.ai:** os arquivos e scripts citados estão empacotados nesta skill; ao executar um script, rode-o a partir do diretório desta skill. Para converter PDF/DOCX, anexar o documento diretamente à conversa costuma bastar — o Claude lê esses formatos nativamente — sem precisar dos scripts.
