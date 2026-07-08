@@ -1,0 +1,15 @@
+{
+  "name": "elis",
+  "owner": {
+    "name": "wesley8pb",
+    "email": "wesley8pb@gmail.com"
+  },
+  "description": "Marketplace do ELIS — Engenharia Legal e Inteligente de Sentenças (direito eleitoral brasileiro)",
+  "plugins": [
+    {
+      "name": "elis",
+      "source": "./elis-plugin",
+      "description": "Fluxo de engenharia de contexto para sentenças eleitorais em 4 etapas, com skills para análise FIRAC+, deliberação, arquitetura da sentença, sentença final, tutela de urgência (RP), conversão de arquivos e templates."
+    }
+  ]
+}

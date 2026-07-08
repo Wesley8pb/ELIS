@@ -1,0 +1,20 @@
+{
+  "name": "elis",
+  "displayName": "ELIS — Engenharia Legal e Inteligente de Sentenças",
+  "version": "1.0.0",
+  "description": "Assistente de IA especializado em direito eleitoral brasileiro. Processa documentos de processos judiciais eleitorais por meio de um fluxo estruturado de 4 etapas (análise FIRAC+, deliberação, arquitetura e sentença), com skills dedicadas para tutela de urgência em propaganda eleitoral (RP), conversão de arquivos e templates de sentença.",
+  "author": {
+    "name": "wesley8pb",
+    "email": "wesley8pb@gmail.com"
+  },
+  "repository": "https://github.com/wesley8pb/elis",
+  "license": "MIT",
+  "keywords": [
+    "direito-eleitoral",
+    "sentencas",
+    "juridico",
+    "firac",
+    "tse",
+    "justica-eleitoral"
+  ]
+}
