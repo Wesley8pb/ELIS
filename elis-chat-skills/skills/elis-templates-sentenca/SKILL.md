@@ -1,5 +1,5 @@
 ---
-name: templates-sentenca
+name: elis-templates-sentenca
 description: Sistema de templates de sentenças e decisões eleitorais do ELIS. Contém 15 templates embarcados (sentenças de AIJE, AIME, Ação Penal Eleitoral e decisões liminares em RP/RPEsp) com índice para busca por tipo de ação, julgamento e tema. Cobre três fluxos - gerar template a partir de documento, salvar sentença como template e usar template na Etapa 4. Acionar quando o usuário pedir para usar, listar, gerar ou salvar templates de sentença, ou quando a Etapa 4 oferecer template do sistema.
 ---
 
@@ -11,7 +11,7 @@ Permite **gerar, salvar, indexar e utilizar templates** de sentenças eleitorais
 
 | Local | Conteúdo | Escrita |
 |-------|----------|---------|
-| `${CLAUDE_PLUGIN_ROOT}/skills/templates-sentenca/templates/` | **15 templates embarcados** no plugin | ❌ Somente leitura (o diretório do plugin instalado é somente leitura) |
+| `templates/` | **15 templates embarcados** no plugin | ❌ Somente leitura (o diretório do plugin instalado é somente leitura) |
 | `TEMPLATES/` na pasta de trabalho do usuário | Templates criados pelo usuário | ✅ Novos templates são salvos aqui |
 
 **Ao buscar templates, SEMPRE consultar os dois locais**: o índice embarcado (`INDICE.md` nesta skill) e a pasta `TEMPLATES/` local (com seu `INDICE-TEMPLATES.md`, se existir).
@@ -97,7 +97,7 @@ Com base no caso ([Tipo de Ação], [Julgamento], [Tema]):
 Qual deseja usar? (digite o número ou "nenhum")
 ```
 
-3. **CARREGAR** o template escolhido (embarcado: `${CLAUDE_PLUGIN_ROOT}/skills/templates-sentenca/templates/<nome>.md`; local: `TEMPLATES/<nome>.md`).
+3. **CARREGAR** o template escolhido (embarcado: `templates/<nome>.md`; local: `TEMPLATES/<nome>.md`).
 4. **ADAPTAR** ao caso concreto: substituir placeholders pelos dados reais, ajustar fundamentação aos fatos, integrar provas/argumentos das etapas anteriores e jurisprudência/doutrina fornecidas.
 5. **GERAR** a sentença final.
 
@@ -198,3 +198,7 @@ Qual deseja usar? (digite o número ou "nenhum")
 ## Índice dos Templates Embarcados
 
 Consultar o arquivo `INDICE.md` desta skill.
+
+---
+
+> **Ambiente claude.ai:** os arquivos e scripts citados estão empacotados nesta skill; ao executar um script, rode-o a partir do diretório desta skill. Para converter PDF/DOCX, anexar o documento diretamente à conversa costuma bastar — o Claude lê esses formatos nativamente — sem precisar dos scripts.
