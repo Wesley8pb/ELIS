@@ -2,14 +2,12 @@
 
 Permite **gerar, salvar, indexar e utilizar templates** de sentenças eleitorais, reutilizando modelos já validados para acelerar a produção de novas sentenças.
 
-## Onde os templates vivem
+## Biblioteca de templates
 
-| Local | Conteúdo | Escrita |
-|-------|----------|---------|
-| `templates/` | **15 templates embarcados** no plugin | ❌ Somente leitura (o diretório do plugin instalado é somente leitura) |
-| `TEMPLATES/` na pasta de trabalho do usuário | Templates criados pelo usuário | ✅ Novos templates são salvos aqui |
+Os **15 templates** ficam em `templates/`, com índice em `INDICE-TEMPLATES.md` (ambos empacotados neste skill, somente leitura).
 
-**Ao buscar templates, SEMPRE consultar os dois locais**: o índice embarcado (`INDICE-TEMPLATES.md` nesta skill) e a pasta `TEMPLATES/` local (com seu `INDICE-TEMPLATES.md`, se existir).
+- **Usar um template**: consulte `INDICE-TEMPLATES.md` e leia `templates/<nome>.md`.
+- **Criar um novo template**: gere-o como um **Artefato** (não há pasta local para gravar).
 
 ## Nomenclatura de Templates
 
@@ -60,8 +58,7 @@ Para liminares: `CONCESSAO`, `DENEGACAO`, `PARCIAL`, `CITACAO`.
 1. **ANALISAR** o documento: tipo de ação, julgamento, tema principal e secundários, estrutura e padrões de redação.
 2. **GENERALIZAR**: substituir dados específicos por placeholders; manter estrutura, estilo e fundamentação jurídica genérica.
 3. **GERAR** o template conforme a Estrutura Obrigatória abaixo.
-4. **SALVAR** em `TEMPLATES/` (pasta de trabalho) com a nomenclatura padrão.
-5. **ATUALIZAR** o índice local `TEMPLATES/INDICE-TEMPLATES.md` (criar se não existir).
+4. **GERAR** o template como um **Artefato**, com a nomenclatura padrão no título.
 
 ## FLUXO 2: Salvar template após a Etapa 4
 
@@ -74,11 +71,11 @@ Para liminares: `CONCESSAO`, `DENEGACAO`, `PARCIAL`, `CITACAO`.
    - IDs de documentos → `[ID_DOCUMENTO_X]`
    - Manter estrutura, estilo e fundamentação
 2. **IDENTIFICAR** metadados: tipo de ação, julgamento, tema principal (do contexto da Etapa 1).
-3. **SALVAR** e **INDEXAR** conforme Fluxo 1.
+3. **GERAR** o template como um **Artefato** (ver Fluxo 1).
 
 ## FLUXO 3: Uso de template na Etapa 4
 
-1. **VARRER** os índices (embarcado `INDICE-TEMPLATES.md` + `TEMPLATES/INDICE-TEMPLATES.md` local, se existir): identificar tipo de ação, julgamento e tema do caso atual.
+1. **VARRER** os índices (embarcado `INDICE-TEMPLATES.md`): identificar tipo de ação, julgamento e tema do caso atual.
 2. **SUGERIR** templates compatíveis:
 
 ```
@@ -92,7 +89,7 @@ Com base no caso ([Tipo de Ação], [Julgamento], [Tema]):
 Qual deseja usar? (digite o número ou "nenhum")
 ```
 
-3. **CARREGAR** o template escolhido (embarcado: `templates/<nome>.md`; local: `TEMPLATES/<nome>.md`).
+3. **CARREGAR** o template escolhido (embarcado: `templates/<nome>.md`).
 4. **ADAPTAR** ao caso concreto: substituir placeholders pelos dados reais, ajustar fundamentação aos fatos, integrar provas/argumentos das etapas anteriores e jurisprudência/doutrina fornecidas.
 5. **GERAR** a sentença final.
 
@@ -188,7 +185,7 @@ Qual deseja usar? (digite o número ou "nenhum")
 4. **PRESERVAR** a qualidade técnica da fundamentação
 5. **ATUALIZAR** o índice local sempre que criar novo template
 6. **VERIFICAR** nomenclatura antes de salvar
-7. **NUNCA** tentar gravar dentro do diretório do plugin — novos templates vão para `TEMPLATES/` da pasta de trabalho
+7. **NUNCA** tentar gravar dentro do diretório do plugin — novos templates vão para a biblioteca deste skill da pasta de trabalho
 
 ## Índice dos Templates Embarcados
 

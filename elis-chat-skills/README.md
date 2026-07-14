@@ -21,15 +21,22 @@ elis/
 │   ├── 2-deliberacao.md     # Etapa 2 — Deliberação
 │   ├── 3-arquitetura.md     # Etapa 3 — Arquitetura da sentença
 │   ├── 4-sentenca.md        # Etapa 4 — Sentença final
-│   ├── conversao-arquivos.md
 │   └── templates-sentenca.md
 ├── reference/liminar-rp.md  # blocos invariáveis da tutela de urgência
 ├── INDICE-TEMPLATES.md      # índice dos 15 templates
-├── templates/               # 15 templates de sentenças e decisões
-└── scripts/                 # conversores PDF/DOCX
+└── templates/               # 15 templates de sentenças e decisões
 ```
 
 Como é um único skill, o Claude carrega só o `SKILL.md` de início (leve) e lê o arquivo da etapa correspondente **apenas quando ela é acionada** (progressive disclosure).
+
+### Simplificações em relação ao plugin do Claude Code
+
+A versão de chat é enxuta de propósito — o claude.ai já cobre nativamente o que o plugin fazia via filesystem:
+
+- **Sem camada de conversão**: o Claude lê PDF/DOCX de anexos nativamente (sem `scripts/` nem `etapas/conversao-arquivos.md`).
+- **Sem pastas** `CONTEXTO/`, `PROCESSOS CONCLUIDOS/` ou `TEMPLATES/` local, e **sem etapa de finalização**.
+- **Entradas = anexos** da conversa. **Saídas = Artefatos** (documentos na lateral do chat).
+- Os 15 templates continuam embarcados como biblioteca de leitura; criar um novo template gera um **Artefato**.
 
 ## Pré-requisitos no claude.ai
 
@@ -67,5 +74,5 @@ O script recria `skill/elis/` (versão adaptada, para revisão) e `dist/elis.zip
 
 ## Observações
 
-- **PDF**: os scripts usam `pypdf`, que pode não estar disponível no ambiente do chat. Nesse caso, anexe o PDF diretamente — o Claude o lê nativamente.
+- Anexe os documentos do processo diretamente na conversa — não é preciso converter nada.
 - Use apenas skills de fontes confiáveis; audite o conteúdo antes de subir (este foi gerado do seu próprio projeto).

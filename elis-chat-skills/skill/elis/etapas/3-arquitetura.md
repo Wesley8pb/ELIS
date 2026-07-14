@@ -2,7 +2,7 @@
 
 ## 🎯 OBJETIVO
 
-Elaborar um **plano estruturado e completo da sentença judicial**, organizando automaticamente todos os elementos decisórios em ordem lógica e sequencial, com base nas análises das etapas anteriores (FIRAC+ e Conjunto Probatório, disponíveis em `CONTEXTO/`).
+Elaborar um **plano estruturado e completo da sentença judicial**, organizando automaticamente todos os elementos decisórios em ordem lógica e sequencial, com base nas análises das etapas anteriores (FIRAC+ e Conjunto Probatório, produzidas anteriormente nesta conversa).
 
 **⚠️ PREMISSA FUNDAMENTAL:**
 Este plano utiliza automaticamente todos os argumentos e elementos probatórios já identificados na Etapa 2 (Conjunto Probatório), organizando-os em arquitetura decisória coerente conforme o julgamento definido pelo magistrado.
@@ -510,15 +510,11 @@ Antes de prosseguir, verifique se você possui:
 - [ ] **Mapa de referências probatórias** completo (com IDs e páginas)
 - [ ] **Plano aprovado** pelo magistrado (com ou sem adaptações)
 
-## ARQUIVO DE SAÍDA
 
-Salvar o plano em `CONTEXTO/ETAPA3-ARQUITETURA-SENTENCA.md` na pasta de trabalho atual (criar a pasta `CONTEXTO/` se não existir).
+## Entrega desta etapa (Artefato)
 
-## AO CONCLUIR ESTA ETAPA — manter o fluxo ativo
+Apresente o resultado como um **Artefato** intitulado **"ELIS — Arquitetura da Sentença"**. Ao final, inclua o aviso obrigatório de IA generativa.
 
-Após salvar o plano, apresentá-lo ao usuário e incluir o aviso de IA generativa:
-
-1. Perguntar se deseja ajustes no plano antes de prosseguir.
-2. Verificar os critérios para avançar (checklist acima).
-3. Sugerir explicitamente a próxima fase: **"O plano da sentença está pronto. Deseja prosseguir para a Etapa 4 (Sentença Final)? Use `prossiga para a Etapa 4` ou diga 'prossiga'."**
-4. Nunca encerrar a conversa sem oferecer a próxima etapa.
+Em seguida:
+1. Pergunte ao usuário se deseja **ajustes**.
+2. Sugira a **Etapa 4 (Sentença Final)** — *"prossiga para a Etapa 4"*.

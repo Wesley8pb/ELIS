@@ -2,7 +2,7 @@
 
 ## 🎯 OBJETIVO
 
-Gerar a **sentença judicial de EXCELÊNCIA completa e fundamentada**, pronta para uso, com base no contexto construído nas etapas anteriores (FIRAC+, Deliberação e Arquitetura, disponíveis em `CONTEXTO/`).
+Gerar a **sentença judicial de EXCELÊNCIA completa e fundamentada**, pronta para uso, com base no contexto construído nas etapas anteriores (FIRAC+, Deliberação e Arquitetura, produzidas anteriormente nesta conversa).
 
 **⚠️ PREMISSAS FUNDAMENTAIS:**
 1. Esta sentença utiliza automaticamente todos os elementos das Etapas 1, 2 e 3
@@ -63,7 +63,7 @@ Doutrina fornecida:
 Deseja usar um modelo de sentença para servir de template?
 
 Opções:
-- [ ] Usar template do SISTEMA (templates embarcados no plugin + TEMPLATES/ local)
+- [ ] Usar template do SISTEMA (os 15 templates deste skill)
 - [ ] Fornecer um modelo EXTERNO (cole o texto ou forneça o arquivo)
 - [ ] Não usar template (gerar com estrutura padrão do Framework)
 
@@ -78,7 +78,7 @@ mantendo o estilo e formatação do template fornecido.
 
 Se o usuário escolher usar template do sistema, **consultar as instruções em `etapas/templates-sentenca.md`** e seguir o Fluxo 3 (Uso de Template). Em resumo:
 
-1. **VARRER** o índice embarcado das instruções em `etapas/templates-sentenca.md` e a pasta `TEMPLATES/` local da área de trabalho (se existir)
+1. **VARRER** o índice embarcado das instruções em `etapas/templates-sentenca.md`
 2. **IDENTIFICAR** templates compatíveis com: tipo de ação, julgamento escolhido e tema principal
 3. **SUGERIR** os compatíveis, indicando o percentual de compatibilidade
 4. **CARREGAR** o template escolhido
@@ -284,54 +284,11 @@ Deseja fazer ajustes?
 Por favor, indique suas preferências para ajuste final.
 ```
 
-## 📄 SALVAR COMO TEMPLATE
 
-**Após geração da sentença, SEMPRE questionar:**
+## Entrega desta etapa (Artefato)
 
-```
-📄 SALVAR COMO TEMPLATE?
+Apresente o resultado como um **Artefato** intitulado **"ELIS — Sentença Final"**. Ao final, inclua o aviso obrigatório de IA generativa.
 
-A sentença foi gerada com sucesso. Deseja salvá-la como template para uso futuro?
-
-- [ ] Sim, salvar como template
-- [ ] Não, apenas finalizar
-
-Se SIM:
-- O template será generalizado (dados específicos substituídos por placeholders)
-- Será salvo em TEMPLATES/ (pasta de trabalho) com nomenclatura padrão
-```
-
-Se SIM, **consultar as instruções em `etapas/templates-sentenca.md`** e seguir o Fluxo 2 (Salvar Template após Etapa 4). Em resumo:
-
-1. **GENERALIZAR** a sentença: substituir partes por `[NOME_AUTOR]`/`[NOME_REU]`, número por `[NUMERO_PROCESSO]`, datas por `[DATA_FATO]`/`[DATA_SENTENCA]`, IDs por `[ID_DOCUMENTO_X]`; manter estrutura, estilo e fundamentação
-2. **IDENTIFICAR** metadados: tipo de ação, julgamento, tema principal (do contexto da Etapa 1)
-3. **NOMEAR**: `[TIPO-ACAO]_[JULGAMENTO]_[TEMA-PRINCIPAL].md` (ex: `ACAO-PENAL_IMPROCEDENCIA_CORRUPCAO-ELEITORAL.md`)
-4. **SALVAR** em `TEMPLATES/` da pasta de trabalho (o diretório do plugin instalado é somente leitura)
-5. **ATUALIZAR** o índice local `TEMPLATES/INDICE-TEMPLATES.md` (criar se não existir)
-
-## ARQUIVO DE SAÍDA
-
-Salvar a sentença em `CONTEXTO/ETAPA4-SENTENCA-FINAL.md` na pasta de trabalho atual.
-
-## AO CONCLUIR ESTA ETAPA — manter o fluxo ativo
-
-Após salvar a sentença, apresentá-la ao usuário e incluir o aviso de IA generativa:
-
-1. Perguntar sobre **ajustes finais** (bloco Revisão acima).
-2. Perguntar se deseja **salvar como template** (bloco acima).
-3. Sugerir explicitamente a finalização: **"Deseja finalizar o processo e arquivar os artefatos? Use `finalize o processo` ou diga 'finalize o processo'."**
-
-**Mensagem de Conclusão (após a finalização):**
-```
-✅ Engenharia de contexto do processo [NÚMERO] concluída com sucesso!
-
-📁 Arquivos gerados:
-- ETAPA1-ANALISE-FIRAC.md
-- ETAPA2-DELIBERACAO-[TIPO].md
-- ETAPA3-ARQUITETURA-SENTENCA.md
-- ETAPA4-SENTENCA-FINAL.md
-
-Os arquivos foram movidos para PROCESSOS CONCLUIDOS/[NÚMERO]/
-
-🎯 A sentença está pronta para revisão final e utilização.
-```
+Em seguida:
+1. Pergunte ao usuário se deseja **ajustes**.
+2. Para reaproveitar a sentença como modelo, veja `etapas/templates-sentenca.md` — o template é entregue como um **novo Artefato**.

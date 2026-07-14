@@ -1,7 +1,7 @@
 # ÍNDICE DE TEMPLATES EMBARCADOS (plugin ELIS)
 
 > Os arquivos abaixo estão em `templates/` dentro desta skill.
-> Templates criados pelo usuário ficam em `TEMPLATES/` da pasta de trabalho e possuem índice próprio (`TEMPLATES/INDICE-TEMPLATES.md`).
+> Templates criados pelo usuário ficam em a biblioteca deste skill da pasta de trabalho e possuem índice próprio (o índice deste skill).
 
 ## Estatísticas
 - **Total de templates embarcados**: 15
@@ -93,4 +93,4 @@
 
 ## Novos Templates
 
-Templates criados pelo usuário **não são gravados aqui** (o diretório do plugin é somente leitura). Salvá-los em `TEMPLATES/` da pasta de trabalho, com nomenclatura `[TIPO]_[JULGAMENTO]_[TEMA].md`, e mantê-los indexados em `TEMPLATES/INDICE-TEMPLATES.md` local. Ver instruções completas em `SKILL.md` desta skill.
+Templates criados pelo usuário **não são gravados aqui** (o diretório do plugin é somente leitura). Salvá-los em a biblioteca deste skill da pasta de trabalho, com nomenclatura `[TIPO]_[JULGAMENTO]_[TEMA].md`, e mantê-los indexados em o índice deste skill local. Ver instruções completas em `SKILL.md` desta skill.

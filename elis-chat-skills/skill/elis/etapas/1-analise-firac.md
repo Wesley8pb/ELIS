@@ -112,15 +112,11 @@ Ao final da lista, detalhe de forma hierárquica o(s) pedido(s) principal(ais) e
 
 - Termine sempre com 🏁.
 
-## ARQUIVO DE SAÍDA
 
-Salvar a análise completa em `CONTEXTO/ETAPA1-ANALISE-FIRAC.md` na pasta de trabalho atual (criar a pasta `CONTEXTO/` se não existir).
+## Entrega desta etapa (Artefato)
 
-## AO CONCLUIR ESTA ETAPA — manter o fluxo ativo
+Apresente o resultado como um **Artefato** intitulado **"ELIS — Análise FIRAC+"**. Ao final, inclua o aviso obrigatório de IA generativa.
 
-Após salvar a análise e apresentá-la ao usuário:
-
-1. Perguntar se deseja ajustes antes de prosseguir.
-2. **Se a classe processual for RP com pedido de tutela de urgência (liminar)**: informar que a Etapa 1.5 (Tutela de Urgência — `analise o pedido liminar`) pode ser acionada a qualquer momento, e sugerir executá-la agora.
-3. Sugerir explicitamente a próxima fase: **"Deseja prosseguir para a Etapa 2 (Deliberação)? Use `prossiga para a Etapa 2` ou diga 'prossiga'."**
-4. Nunca encerrar a conversa sem oferecer a próxima etapa.
+Em seguida:
+1. Pergunte ao usuário se deseja **ajustes**.
+2. Se a classe for **RP** com pedido de tutela de urgência, ofereça a Etapa 1.5 (leia `etapas/1.5-liminar-rp.md`). Caso contrário, sugira a **Etapa 2 (Deliberação)** — o usuário pode dizer *"prossiga para a Etapa 2"*.

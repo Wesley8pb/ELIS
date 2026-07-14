@@ -7,7 +7,7 @@ Gerar análise técnico-jurídica detalhada do conjunto probatório de **qualque
 **⚠️ PREMISSA FUNDAMENTAL:**
 Esta análise é uma **ferramenta de apoio técnico** para subsidiar o entendimento e a decisão do magistrado, que sempre parte de seu **juízo humano e experiência jurídica**. A decisão final sobre procedência ou improcedência é **prerrogativa exclusiva do julgador**.
 
-CASO O PROCESSO POSSUA UMA ANÁLISE FIRAC (`CONTEXTO/ETAPA1-ANALISE-FIRAC.md`), DÊ PREFERÊNCIA AOS ELEMENTOS DELA.
+CASO O PROCESSO POSSUA UMA ANÁLISE FIRAC (das etapas anteriores desta conversa), DÊ PREFERÊNCIA AOS ELEMENTOS DELA.
 
 ## 📋 ETAPA INICIAL — DEFINIÇÃO DO POSICIONAMENTO
 
@@ -191,15 +191,11 @@ Análise técnica robusta que permita ao magistrado:
 
 **A análise deve ser uma ferramenta prática e confiável para orientar a fundamentação judicial de qualidade superior.**
 
-## ARQUIVO DE SAÍDA
 
-Salvar a análise em `CONTEXTO/ETAPA2-DELIBERACAO-PROCEDENCIA.md` ou `CONTEXTO/ETAPA2-DELIBERACAO-IMPROCEDENCIA.md`, conforme o posicionamento escolhido (criar a pasta `CONTEXTO/` se não existir). Se o usuário pedir a análise do julgamento oposto, salvar em arquivo separado com o nome correspondente.
+## Entrega desta etapa (Artefato)
 
-## AO CONCLUIR ESTA ETAPA — manter o fluxo ativo
+Apresente o resultado como um **Artefato** intitulado **"ELIS — Deliberação"**. Ao final, inclua o aviso obrigatório de IA generativa.
 
-Após salvar a análise, apresentá-la ao usuário e incluir o aviso de IA generativa:
-
-1. Perguntar se deseja a **análise do julgamento oposto**.
-2. Perguntar se deseja ajustes antes de prosseguir.
-3. Sugerir explicitamente a próxima fase: **"Com base nesta análise probatória, os elementos estão organizados para estruturar a linha argumentativa da sentença. Deseja prosseguir para a Etapa 3 (Arquitetura da Sentença)? Use `prossiga para a Etapa 3` ou diga 'prossiga'."**
-4. Nunca encerrar a conversa sem oferecer a próxima etapa.
+Em seguida:
+1. Pergunte ao usuário se deseja **ajustes**.
+2. Ofereça a análise pelo **julgamento oposto**, se desejar, e sugira a **Etapa 3 (Arquitetura da Sentença)** — *"prossiga para a Etapa 3"*.
